@@ -1,0 +1,94 @@
+ * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-image: url(../images/feature.png);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 360px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #0033ff;
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: orange;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      border-color: #0083b0;
+      outline: none;
+    }
+
+    input [type=submit] {
+      width: 100%;
+      padding: 10px;
+      background-color: #000000;
+      color: rgb(255, 247, 247);
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+
+    input [type=submit]:hover {
+      background-color: #00b4db;
+    }
+
+    /* SUCCESS MESSAGE PAGE */
+    .success-box {
+      display: none;
+      text-align: center;
+    }
+
+    .success-box h2 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .success-box p {
+      color: #333;
+    }
+
+    /* CSS trick for showing success page */
+    #submitted:target .form-box {
+      display: none;
+    }
+
+    #submitted:target .success-box {
+      display: block;
+    }
+    
