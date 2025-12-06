@@ -26,46 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
- 
-/*=============== PRICE  RANGE ===============*/
-
-
-const minRange = document.getElementById("minRange");
-const maxRange = document.getElementById("maxRange");
-const minPrice = document.getElementById("min-price");
-const maxPrice = document.getElementById("max-price");
-const priceField = document.getElementById("priceField");
-
-function updateSlider() {
-    let minVal = parseInt(minRange.value);
-    let maxVal = parseInt(maxRange.value);
-
-    if (minVal > maxVal) {
-        [minRange.value, maxRange.value] = [maxRange.value, minRange.value];
-        [minVal, maxVal] = [maxVal, minVal];
-    }
-
-    minPrice.textContent = minVal;
-    maxPrice.textContent = maxVal;
-}
-
-    minRange.addEventListener("input", updateSlider);
-    maxRange.addEventListener("input", updateSlider);
-
-    priceField.addEventListener("click", function (e) {
-        e.stopPropagation();
-        priceField.classList.toggle("show");
-    });
-
-    document.body.addEventListener("click", function () {
-        priceField.classList.remove("show");
-    });
-
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
- 
-
- 
+  
 const sr = ScrollReveal({
     distance: '150px',
     duration: 1000,
